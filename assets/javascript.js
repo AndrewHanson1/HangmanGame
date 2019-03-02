@@ -4,94 +4,94 @@ var words = ["ONE", "TWO", "THREE", "FOUR", "FIVE", "SIXTEEN"]
 var arraySelector = Math.floor(Math.random() * words.length);
 var chosen = words[arraySelector]
 //vars
-var alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
-        'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S',
-        'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
 var rightLetters = [];
 var wrongLetters = [];
 var underScore = [];
 var wins = 0;
-var losses = 0;
 var flag = 0;
+var hasntWon = true;
 //html changes
 var underScoreHTML = document.getElementsByClassName("underScore");
 var winsHTML = document.getElementsByClassName("wins");
-var wrongLettersHTML = document.getElementsByClassName("wrong1");
-//var stored = chosen.charAt(x)
 
 
 
 //Create underscores based on length of words
- var createUnderscores = function () {
+function createUnderscores() {
     for (i = 0; i < chosen.length; i++) {
-        
+
         underScore.push('_');
 
 
     }
-    
-    underScoreHTML[0].innerHTML = underScore.join(" ")
-    
-    
-    return underScore;
-
-
+    underScoreHTML[0].innerHTML = "  ";
+    underScore = [];
+    chosen
+    underScoreHTML[0].innerHTML = underScore.join(" ");
 }
-createUnderscores();
+
 //start and reset function
-
- 
-    
- 
-//run underscore function
-
+createUnderscores();
 
 
 //Get users guess
 document.onkeyup = function (event) {
     var keyWord = String.fromCharCode(event.keyCode);
 
+
     for (x = 0; x < chosen.length; x++) {
 
         //if right 
         if (chosen.charAt(x) == keyWord) {
-            console.log(x)
+            console.log(keyWord);
             rightLetters.push(keyWord);
             //replace underscore
             underScore[x] = keyWord;
             underScoreHTML[0].innerHTML = underScore.join(" ");
             flag = 1;
-            
-            
-            
+
+
+
+
 
 
         }
         //declare winner
         if (underScore.join("") == chosen) {
-            wins++
-            winsHTML[0].innerHTML = wins
-            
-            underScoreHTML[0] = "test"
-            
-            
-            
-            
-            
-            
+
+            if (hasntWon) {
+                wins++;
+                winsHTML[0].innerHTML = wins;
+                hasntWon = false
+                createUnderscores();
+            }
+
+
+
+
+
+
+
+
+
+
         }
     }
     //if wrong push to wrong array
 
-    if (flag == 0) { 
+    if (flag == 0) {
+        checkValue(wrongLetters, chosen.charAt(x))
+        console.log(keyWord)
+
         wrongLetters.push(keyWord);
-        
+
         wrongLettersHTML[0].innerHTML = wrongLetters.join(" ");
     } flag = 0;
 
 }
 
-    
+
 
 
 
