@@ -3,64 +3,92 @@ body {
 }
 
 header {
-    height: 100px;
-    background-color: palegoldenrod;
-    border-bottom: #000000 double 8px;
-    font-size: 20px;
+    height: 150px;
+    background-color: forestgreen;
+    border-bottom: burlywood double 12px;
+    font-size: 40px;
     text-align: center;
     margin: auto;
     color: black;
-}
+    font-family: "Permanent Marker";
 
+}
+.titletext {
+    padding-top: 25px;
+    text-decoration: underline;
+}
 .underScore {
-    height: 150px;
-    border: 3px solid black;
+    height: 200px;
+    border: 3px outset black;
     font-size: 50px;
     text-align: center;
     margin: 50px auto;
     color: black;
     position: relative;
+    padding-top: 50px;
+    font-family: "Permanent Marker";
+    
     
 }
 .wins {
-    border: solid black 1px;
     position: absolute;
-    top: 75px;
-    right: 50px;
+    top: 220px;
+    left: 120px;
+    font-size: 25px;
+    color: forestgreen;
+    font-family: "Permanent Marker";
 }
 
-.wrongGuess {
-    height: 150px;
-    border: 3px solid black;
+.winstext {
+    position: absolute;
+    top: 220px;
+    left: 50px;
+    font-size: 25px;
+    color: forestgreen;
+    font-family: "Permanent Marker";
     
-    font-size: 20px;
-    text-align: center;
-    margin: 50px auto;
-    color: black;
 }
+.guesses {
+    position: absolute;
+    left: 220px;
+    top: 180px;
+    font-size: 25px;
+    color: forestgreen;
+    font-family: "Permanent Marker";
+}
+.guessestext{
+    position: absolute;
+    top: 180px;
+    left: 50px;
+    font-size: 25px;
+    color: forestgreen;
+    font-family: "Permanent Marker";
+}
+
+
 
 .buttons{
     border: 4px solid white;
     width: 50%;
-
     margin: auto;
     position: relative;
 }
-#alphabet li {
+.letter  {
     float: left;
-    margin: 0 10px 10px 0;
+    margin: 0px 10px 10px 0;
     padding: 6px;
     list-style: none;
     width: 65px;
     height: 45px;
     background: burlywood;
-    color: forestgreen;
     cursor: pointer;
     border-radius: 15px;
     border: solid 2px #000000;
     text-align: center;
     font-size: 25px;
     position: relative;
+    color: forestgreen;
+    font-family: "Permanent Marker";
     
 }
 
@@ -68,15 +96,197 @@ header {
         margin: 10px 30px auto;
         max-width: 900px;
     }
-
-#alphabet:hover li:hover{
+ .letter:hover{
 
     background: forestgreen;
     color: burlywood;
     border: solid 2px white;
+   
     
 }
 img {
-    margin: auto;
-    border: 10px solid black;
+    margin: 20px auto;
+    border: 8px solid black;
+    height: 300px;
+    width: 240px;
+
 }
+
+.disabled {
+    float: left;
+    margin: 0 10px 10px 0;
+    padding: 6px;
+    list-style: none;
+    width: 65px;
+    height: 45px;
+    background: grey;
+    border-radius: 15px;
+    border: solid 4px #000000;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+    color: silver;
+    font-family: "Permanent Marker";
+    
+}
+@media only screen and (max-width: 1199px) {
+    img {margin-right: 200px;
+    }
+    .letter  {
+        float: left;
+        margin: 0px 10px 10px 0;
+        padding: 6px;
+        list-style: none;
+        width: 65px;
+        height: 45px;
+        background: burlywood;
+        cursor: pointer;
+        border-radius: 15px;
+        border: solid 2px #000000;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        left: 0;
+        color: forestgreen;
+        font-family: "Permanent Marker";
+        
+    }
+    .disabled {
+        float: left;
+        margin: 0 10px 10px 0;
+        padding: 6px;
+        list-style: none;
+        width: 65px;
+        height: 45px;
+        background: grey;
+        border-radius: 15px;
+        border: solid 2px #000000;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        left: 0px;
+        color: silver;
+        font-family: "Permanent Marker";
+    }
+
+}
+@media only screen and (max-width: 992px) {
+    img {margin-right: 200px;
+        
+        
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    img {
+        margin-left: 110px;
+    }
+}
+
+@media only screen and (max-width: 482px) {
+    img {
+        margin-right: 200px;
+    }
+    .letter  {
+        float: left;
+        margin: 0px 10px 10px 0;
+        padding: 2px;
+        list-style: none;
+        width: 45px;
+        height: 35px;
+        background: burlywood;
+        cursor: pointer;
+        border-radius: 15px;
+        border: solid 2px #000000;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        left: 35px;
+        color: forestgreen;
+        font-family: "Permanent Marker";
+        
+    }
+    .disabled {
+        float: left;
+        margin: 0 10px 10px 0;
+        padding: 2px;
+        list-style: none;
+        width: 45px;
+        height: 35px;
+        background: grey;
+        border-radius: 15px;
+        border: solid 2px #000000;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        left: 35px;
+        color: silver;
+        font-family: "Permanent Marker";
+    }
+    .underScore {
+        height: 200px;
+        border: 3px outset black;
+        font-size: 30px;
+        text-align: center;
+        margin: 50px auto;
+        color: black;
+        position: relative;
+        padding-top: 35px;
+        
+        
+    }
+}
+@media only screen and (max-width: 360px) {
+    img {
+        margin-left: 35px;
+    }
+    .letter  {
+        float: left;
+        margin: 0px 5px 5px 0;
+        padding: 2px;
+        list-style: none;
+        width: 45px;
+        height: 35px;
+        background: burlywood;
+        cursor: pointer;
+        border-radius: 15px;
+        border: solid 2px #000000;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        left: 10px;
+        color: forestgreen;
+        font-family: "Permanent Marker";
+        
+        }
+    .disabled {
+        float: left;
+        margin: 0px 5px 5px 0;
+        padding: 3px;
+        list-style: none;
+        width: 45px;
+        height: 35px;
+        background: grey;
+        border-radius: 15px;
+        border: solid 2px #000000;
+        text-align: center;
+        font-size: 25px;
+        position: relative;
+        left: 10px;
+        color: silver;
+        font-family: "Permanent Marker";
+        }
+        .underScore {
+            height: 200px;
+            border: 3px outset black;
+            font-size: 30px;
+            text-align: center;
+            margin: 50px auto;
+            color: black;
+            position: relative;
+            padding-top: 25px;
+            
+            
+        }
+    }
