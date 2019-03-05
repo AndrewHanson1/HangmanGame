@@ -73,7 +73,7 @@ function imageChanger(){
         break;
         
         case 1: 
-        myImage.setAttribute("src", "assets/images/Trees/Asepn.jpg")
+        myImage.setAttribute("src", "assets/images/Trees/Aspen.jpg")
         break;
 
         case 3: 
