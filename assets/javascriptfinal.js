@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function() {
+
 //create an array of words
 var words = ["ASH", "ASPEN", "HAWTHORN", "BIRCH", "HICKORY",
     "HORNBEAM", "COTTONWOOD", "ELM", "HEMLOCK", "BASSWOOD", "MAPLE",
@@ -206,6 +208,8 @@ function containsLetter(letterToCheck) {
 
     }
 }
+    
+    });
     
 
 //running game logic
