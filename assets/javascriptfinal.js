@@ -209,10 +209,10 @@ function containsLetter(letterToCheck) {
     }
 }
     
-    });
+   
     
 
 //running game logic
 chooseWord();
 
-
+ });
