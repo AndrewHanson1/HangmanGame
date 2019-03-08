@@ -27,7 +27,7 @@ for (i = 0; i < letterButtons.length; i++) {
 //choose word and genereate underscores and push to html
 function chooseWord() {
 
-    arraySelector = Math.floor(Math.random() * words.length + 1);
+    arraySelector = Math.floor(Math.random() * words.length);
     myImage.setAttribute("src", "assets/images/Trees/question.png");
     guessesLeft = startingGuessAmount;
     guessesLeftHTML[0].innerHTML = startingGuessAmount;
