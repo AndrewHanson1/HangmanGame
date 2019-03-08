@@ -193,7 +193,6 @@ function containsLetter(letterToCheck) {
     else {
         if (underScore.join("") == chosen && inputBlocker == false ) {
             wins++;
-            guessesLeft = 8;
             winsHTML[0].innerHTML = wins;
             inputBlocker = true;
             imageChanger();
