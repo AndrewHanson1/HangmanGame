@@ -41,7 +41,7 @@ function chooseWord() {
         underScore.push('_');
     }
     underScoreHTML[0].innerHTML = underScore.join(" ");
-    for (var j = 0; j <= buttonClass.length; j++) {
+    for (var j = 0; j < buttonClass.length; j++) {
         buttonClass[j].setAttribute("class", "letter");
 
     }
